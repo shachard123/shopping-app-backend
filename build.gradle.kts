@@ -25,6 +25,7 @@ dependencies {
     implementation(libs.ktor.server.content.negotiation)
     implementation(libs.mongodb.driver.core)
     implementation(libs.mongodb.driver.sync)
+    implementation("org.litote.kmongo:kmongo:4.9.0")
     implementation(libs.bson)
     implementation(libs.ktor.server.auth)
     implementation(libs.ktor.server.auth.jwt)
@@ -33,4 +34,7 @@ dependencies {
     implementation(libs.ktor.server.config.yaml)
     testImplementation(libs.ktor.server.test.host)
     testImplementation(libs.kotlin.test.junit)
+    implementation("at.favre.lib:bcrypt:0.9.0") // For password hashing
+    implementation("io.ktor:ktor-server-cors:2.3.4") // Use the latest version
+
 }
