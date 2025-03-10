@@ -7,6 +7,7 @@ import com.shopping.models.Shop
 import com.shopping.models.Product
 import com.shopping.models.Order
 import com.shopping.services.UserService
+import com.shopping.services.ShopService
 
 import io.ktor.server.application.*
 import org.litote.kmongo.KMongo
@@ -31,12 +32,4 @@ object Database {
     fun closeConnection() {
         mongoClient.close()
     }
-}
-
-fun Application.configureDatabases(){
-    val userService = UserService(Database.users)
-//    val shopService = ShopService(Database.shops)
-//    val productService = ProductService(Database.products)
-//    val orderService = OrderService(Database.orders)
-
 }
